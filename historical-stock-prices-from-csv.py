@@ -19,3 +19,5 @@ for x in arrayOfTickers:
 
 historicalStockPrices["date"] = pd.read_json('https://cloud.iexapis.com/stable/stock/AAPL/chart/1y?token='+token+'')["date"]
 historicalStockPrices.set_index('date',inplace=True)
+
+historicalStockPrices.to_csv('historicalStockPrices.csv')
