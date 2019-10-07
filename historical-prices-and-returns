@@ -39,3 +39,9 @@ for y in arrayOfTickers:
     historicalStockReturns[y] = (historicalStockPrices[y] / historicalStockPrices[y].shift(1) ) - 1      
 
 historicalStockReturns.to_csv('historicalDailyStockReturns - 1 Year.csv')
+
+#calculate cumulative return and save to .csv
+
+cumulativeHistoricalStockReturns = ((historicalStockReturns+1).cumprod()-1).iloc[-1].to_frame()
+print(cumulativeHistoricalStockReturns)
+cumulativeHistoricalStockReturns.to_csv('cumulativeStockReturns - 1 Year.csv')
