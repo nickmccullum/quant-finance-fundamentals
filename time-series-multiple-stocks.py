@@ -9,4 +9,3 @@ for x in arrayOfSymbols:
     historicalStockPrices[x] = pd.read_json('https://cloud.iexapis.com/stable/stock/'+x+'/chart/1y?token='+token+'')["close"]   
 
 historicalStockPrices.head(5)    
-historicalStockPrices.head(5)
