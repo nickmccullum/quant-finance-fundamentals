@@ -21,3 +21,10 @@ historicalStockPrices["date"] = pd.read_json('https://cloud.iexapis.com/stable/s
 historicalStockPrices.set_index('date',inplace=True)
 
 historicalStockPrices.to_csv('historicalStockPrices.csv')
+
+historicalStockReturns = pd.DataFrame()
+
+for y in arrayOfTickers:
+    historicalStockReturns[y] = (historicalStockPrices[y] / historicalStockPrices[y].shift(1) ) - 1      
+
+historicalStockReturns.to_csv('historicalDailyStockReturns - 1 Year.csv')
