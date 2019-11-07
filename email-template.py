@@ -1,4 +1,5 @@
 import smtplib
+import datetime
 
 initialTime = datetime.datetime.now().strftime("%I%M%p on %B %d, %Y")
 content = 'Subject: {}\n\n{}'.format('Data Feeds Builder #'+str(builderNumber)+'- Initialized', 'The data feeds builder Python script has started run at ' + initialTime)
