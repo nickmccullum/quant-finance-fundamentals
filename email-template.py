@@ -8,7 +8,7 @@ mail.ehlo()
 
 mail.starttls()
 
-mail.login('support@suredividend.com','password')
+mail.login('support@suredividend.com',password)
 mail.sendmail('support@suredividend.com','nick@suredividend.com',content)
 #mail.sendmail('support@suredividend.com','ben@suredividend.com',content)
 
