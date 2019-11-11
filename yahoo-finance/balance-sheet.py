@@ -60,7 +60,6 @@ for table_row in table_rows:
         parsed_rows.append(parsed_row)
 
 df = pd.DataFrame(parsed_rows)
-df
 
 df = pd.DataFrame(parsed_rows)
 df = df.set_index(0) # Set the index to the first column: 'Period Ending'.
@@ -71,12 +70,8 @@ cols = list(df.columns)
 cols[0] = 'Date'
 df = df.set_axis(cols, axis='columns', inplace=False)
 
-df
-
 numeric_columns = list(df.columns)[1::] # Take all columns, except the first (which is the 'Date' column)
 
 for column_name in numeric_columnsa:
     df[column_name] = df[column_name].str.replace(',', '') # Remove the thousands separator
     df[column_name] = df[column_name].astype(np.float64) # Convert the column to float64
-
-df.dtypes
