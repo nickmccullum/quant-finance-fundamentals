@@ -86,3 +86,4 @@ symbol = 'MFT.NZ'
 balance_sheet_url = 'https://finance.yahoo.com/quote/' + symbol + '/balance-sheet?p=' + symbol
 
 df_balance_sheet = scrape_table(balance_sheet_url)
+df_income_statement = scrape_table('https://finance.yahoo.com/quote/' + symbol + '/financials?p=' + symbol)
