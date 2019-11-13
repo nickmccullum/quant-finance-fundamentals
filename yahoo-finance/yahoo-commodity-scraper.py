@@ -34,3 +34,5 @@ for i in range(40, 404, 14):
             totalVolumes.append(volume.text)
          for openInterest in srow.find_all('td', attrs={'class':'data-col7'}):
             openInterests.append(openInterest.text)
+
+pd.DataFrame({"Names": names, "Prices": prices, "Change": changes, "% Change": percentChanges, "Market Time": marketTimes,'Open Interest': openInterests ,"Volume": totalVolumes})
