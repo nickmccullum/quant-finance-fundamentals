@@ -16,3 +16,6 @@ for ticker in tickers:
         stockname.append( [ticker, name, price] )
 
 pprint(stockname, width=60)
+
+#will return [['BABA', 'Alibaba Group Holding Limited', 187.25],
+# ['AAPL', 'Apple Inc.', 191.44]]
