@@ -26,3 +26,5 @@ for i in range(40, 404, 14):
          changes.append(change.text)
       for percentChange in listing.find_all('td', attrs={'data-reactid':i+7}):
          percentChanges.append(percentChange.text)
+
+pd.DataFrame({"Names": names, "Prices": prices, "Change": changes, "% Change": percentChanges})
