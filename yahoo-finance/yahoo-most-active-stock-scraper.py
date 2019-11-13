@@ -31,3 +31,5 @@ for listing in soup.find_all('tr', attrs={'class':'SimpleDataTableRow'}):
       totalVolumes.append(totalVolume.text)
    for circulatingSupply in listing.find_all('td', attrs={'aria-label':'Volume'}):
       circulatingSupplys.append(circulatingSupply.text)
+
+pd.DataFrame({"Names": names, "Prices": prices, "Change": changes, "% Change": percentChanges, "Market Cap": marketCaps, "Average Volume": totalVolumes,"Volume":circulatingSupplys})
