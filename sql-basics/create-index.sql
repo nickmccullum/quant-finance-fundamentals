@@ -1,0 +1,3 @@
+/* NOTE: THESE ARE ONLY USEFUL IF YOU ARE RUNNING MULTI-COLUMN SEARCHES */
+
+CREATE INDEX index_name ON public.movies(id, user_id)
